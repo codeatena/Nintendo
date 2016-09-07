@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.virtusventures.nintendo.activity.MainActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/hunter"
+            android:background="@null"
+            android:scaleType="fitEnd"
+            android:layout_gravity="bottom"
+            android:onClick="onHunter"/>
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:src="@drawable/character"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:onClick="onCharacter"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="CHOOSE YOUR GAME"
+            android:id="@+id/textView"
+            android:textColor="@android:color/white"
+            android:background="@color/colorTextBack"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
