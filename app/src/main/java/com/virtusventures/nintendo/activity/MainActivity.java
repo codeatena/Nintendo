@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 sPort.open(connection);
                 sPort.setDTR(true);
                 sPort.setRTS(true);
-                sPort.setParameters(115200, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
+                sPort.setParameters(9600, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
 
             } catch (IOException e) {
 //                try {
@@ -141,8 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (mSerialIoManager != null)
         {
-            byte response[] = new byte[1];
-            response[0] = 0x0C;
+            byte response[] = "c\n".getBytes();
             mSerialIoManager.writeAsync(response);
         }
     }
@@ -151,9 +150,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (mSerialIoManager != null)
         {
-            byte response[] = new byte[1];
-            response[0] = 0x0B;
+            byte response[] = "b\n".getBytes();
             mSerialIoManager.writeAsync(response);
+
         }
     }
 
