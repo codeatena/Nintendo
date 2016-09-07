@@ -140,13 +140,21 @@ public class MainActivity extends AppCompatActivity {
     public void onCharacter(View v) {
 
         if (mSerialIoManager != null)
-            mSerialIoManager.writeAsync("C".getBytes());
+        {
+            byte response[] = new byte[1];
+            response[0] = 0x0C;
+            mSerialIoManager.writeAsync(response);
+        }
     }
 
     public void onHunter(View v) {
 
         if (mSerialIoManager != null)
-            mSerialIoManager.writeAsync("B".getBytes());
+        {
+            byte response[] = new byte[1];
+            response[0] = 0x0B;
+            mSerialIoManager.writeAsync(response);
+        }
     }
 
 }
