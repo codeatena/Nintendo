@@ -74,14 +74,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if (sPort != null) {
-            try {
-                sPort.close();
-            } catch (IOException e) {
-                // Ignore.
-            }
-            sPort = null;
-        }
+//        if (sPort != null) {
+//            try {
+//                sPort.close();
+//            } catch (IOException e) {
+//                // Ignore.
+//            }
+//            sPort = null;
+//        }
     }
 
     @Override
@@ -103,12 +103,12 @@ public class MainActivity extends AppCompatActivity {
                 sPort.setParameters(115200, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
 
             } catch (IOException e) {
-                try {
-                    sPort.close();
-                } catch (IOException e2) {
-                    // Ignore.
-                }
-                sPort = null;
+//                try {
+//                    sPort.close();
+//                } catch (IOException e2) {
+//                    // Ignore.
+//                }
+//                sPort = null;
             }
         }
 
